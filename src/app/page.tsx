@@ -1,101 +1,36 @@
-import Image from "next/image";
+import Grid from "@/components/grid";
+import { Avatar} from "@nextui-org/react";
+import { RiSupabaseFill } from "react-icons/ri";
+import { BsCursorFill } from "react-icons/bs";
+import CamModal from "@/components/camModal";
 
-export default function Home() {
+
+export default function App() {
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="w-full h-[calc(100vh-260px)] bg-[#ebede8] flex flex-col gap-14 justify-center items-center overflow-hidden ">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Avatar isBordered  className="z-10 w-28 h-28 text-large absolute top-[15%] right-[10%] border-5 border-white shadow-2xl" src="https://i.pravatar.cc/150?u=a04258a2462d826712d" />
+      <BsCursorFill size={50} color="#004838" className="absolute top-[24%] right-[17%] z-0 rotate-[-165deg] "/>
+
+      <Avatar isBordered className="z-10 w-28 h-28 text-large absolute border-5 top-[15%] left-[10%] border-white shadow-2xl" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
+      <BsCursorFill size={50} color="#004838" className="absolute top-[23%] left-[17%] z-0 rotate-[70deg] "/>
+
+      <Avatar isBordered className="z-10 w-28 h-28 text-large absolute bottom-[30%] left-[15%] border-5 border-white shadow-2xl" src="https://i.pravatar.cc/150?u=a04258114e29026302d" />
+      <BsCursorFill size={50} color="#004838" className="absolute bottom-[40%] left-[21%] z-0 rotate-[5deg] "/>
+
+      <Avatar isBordered   className="z-10 w-28 h-28 text-large absolute bottom-[23%] right-[15%] border-5 border-white shadow-2xl" src="https://i.pravatar.cc/150?u=a04258114e29026702d" />
+      <BsCursorFill size={50} color="#004838" className="absolute bottom-[35%] right-[20%] z-0 rotate-[-79deg] "/>
+
+      <Grid/>
+      <div className="flex justify-center z-10 px-4 py-1 items-center gap-2 rounded-full bg-white">
+        <RiSupabaseFill size={20} color="#004838"/>
+        <p className="text-sm font-bold text-light_green">CREATE FOR FAST</p>
+      </div>
+      <p className="text-7xl font-bold z-10 text-center text-dark_green">One tool to <span className="underline decoration-yellow decoration-10 underline-offset-[6px]">manage</span> <br/>your work and your team</p>
+      <p className="text-2xl font-semibold z-10 text-center text-dark_grey">Clause simplifies work management and enhances employee recognition through <br/>seamless face recognition technology. </p>
+      <CamModal/>
     </div>
-  );
+    
+  )
 }
