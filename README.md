@@ -19,7 +19,7 @@ This project is built with a powerful, modern technology stack to deliver a fast
 -   **Frontend:** [Next.js](https://nextjs.org/) (React Framework)
 -   **UI:** [HeroUI](https://heroui.dev/) & [Tailwind CSS](https://tailwindcss.com/)
 -   **Backend (AI/ML Service):** [FastAPI](https://fastapi.tiangolo.com/) (Python)
--   **AI Model:** [FaceNet-PyTorch](https://github.com/timesler/facenet-pytorch) for generating facial embeddings.
+-   **AI Model Library:** [FaceNet-PyTorch](https://github.com/timesler/facenet-pytorch) for generating facial embeddings.
 -   **Database & BaaS:** [Supabase](https://supabase.io/)
 -   **Authentication:** [NextAuth.js](https://next-auth.js.org/)
 
