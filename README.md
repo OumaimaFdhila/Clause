@@ -1,7 +1,3 @@
-Of course! Here is an updated README for your project, "Clause," incorporating all the details about its features and technology stack.
-
----
-
 # Clause - AI-Powered Worker Management
 
  <!-- It's highly recommended to add a screenshot or GIF of your application here! -->
