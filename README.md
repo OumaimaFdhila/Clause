@@ -32,5 +32,5 @@ The application operates with a decoupled architecture for scalability and maint
 3.  **Embedding Generation:** The FastAPI service uses the `facenet-pytorch` model to process the image and generate a unique facial embedding (a vector representation of the face).
 4.  **Database Lookup:** This embedding is compared against the stored embeddings in the **Supabase** database to find a matching user.
 5.  **Authentication & Status Update:** Upon a successful match, the user is authenticated, and their status is updated in the `users` table in real-time using Supabase's capabilities.
-6.  **Real-Time Feedback (Frontend):** The Next.js application listens for database changes and reflects the updated user status on the UI immediately.
+6.  **Real-Time Feedback (Frontend):** Using realtime database from supabase, we updated user status on the UI immediately.
 
